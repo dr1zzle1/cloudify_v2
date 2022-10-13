@@ -1,0 +1,102 @@
+@import '../../variables.scss';
+
+.uploader {
+  height: 350px;
+  width: 300px;
+  position: fixed;
+  background-color: #fff;
+  border: 3px solid $primary;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  padding-top: 10px;
+  border-radius: 12px;
+  overflow-y: auto;
+  &-visible {
+    display: block;
+    animation: uploaderAnimVisible 500ms forwards;
+  }
+  &-unvisible {
+    animation: uploaderAnimUnvisible 500ms forwards;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  &__tittle {
+    color: #fff;
+    font-size: 12rem;
+  }
+  &__close {
+    padding: 3px;
+    border: none;
+    background: #fff;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.uploadFile {
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-top: 2px solid $tertiary;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__progressBar {
+    height: 1rem;
+    border-radius: 8px;
+    background-color: #000;
+    display: flex;
+    margin: 3px 0;
+    position: relative;
+  }
+  &__uploadBar {
+    background-color: #7eb948;
+    border-radius: 8px;
+  }
+  &__percent {
+    color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 0px;
+  }
+  &__remove {
+    background: #fff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@keyframes uploaderAnimVisible {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes uploaderAnimUnvisible {
+  0% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+    display: none;
+  }
+}
