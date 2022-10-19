@@ -1,36 +1,43 @@
-@import '../../variables.scss';
+@import '../../variables';
+
 .dropdown-content {
-  display: none;
   position: absolute;
-  padding: 10px 30px;
-  right: 0px;
   top: 50px;
-  background-color: #dddddd;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 0;
   z-index: 1;
+  display: none;
+  padding: 10px 30px;
+  background-color: #ddd;
   border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+
   &:hover {
     display: flex;
     flex-direction: column;
   }
 }
+
 .dropdown-btn {
   background: none;
   border: none;
   cursor: pointer;
+
   svg {
     width: 20px;
     height: 20px;
     background: none;
     transition: all 0.1s linear;
   }
+
   &--delete:hover {
     svg {
       fill: #ff7077;
     }
   }
+
   &--download {
     margin-top: 10px;
+
     &:hover {
       svg {
         fill: $secondary;

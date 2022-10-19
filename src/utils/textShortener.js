@@ -1,9 +1,9 @@
 function textShortener(text, maxLen) {
   if (text.length > maxLen) {
-    let newText = text.slice(0, maxLen - 3) + '...';
-    return newText;
+    let newText = text.slice(0, maxLen - 3) + '...'
+    return newText
   }
-  return text;
+  return text
 }
 
-export default textShortener;
+export default textShortener

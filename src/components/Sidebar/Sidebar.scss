@@ -1,24 +1,28 @@
-@import '../../variables.scss';
+@import '../../variables';
+
 .sidebar {
-  background-color: $dark;
   position: fixed;
-  height: 100vh;
   width: 300px;
+  height: 100vh;
   padding: 10px;
+  background-color: $dark;
+
   &__logo {
+    padding-left: 25px;
     color: #fff;
     font-size: 30px;
     cursor: pointer;
-    padding-left: 25px;
   }
+
   &__filelist {
     margin-top: 110px;
   }
+
   &__logout-link {
     position: absolute;
+    bottom: 20px;
     display: flex;
     align-items: center;
-    bottom: 20px;
     padding-left: 25px;
 
     svg {

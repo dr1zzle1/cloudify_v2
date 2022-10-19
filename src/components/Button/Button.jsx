@@ -1,5 +1,4 @@
-import React from 'react';
-import './Button.scss';
+import './Button.scss'
 
 const Button = ({ icon, children, className, onClick }) => {
   return (
@@ -7,7 +6,7 @@ const Button = ({ icon, children, className, onClick }) => {
       {icon}
       {children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

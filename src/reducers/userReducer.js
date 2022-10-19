@@ -1,12 +1,12 @@
-const SET_USER = 'SET_USER';
-const LOGOUT = 'LOGOUT';
-const SET_ISLOADING = 'SET_ISLOADING';
+const SET_USER = 'SET_USER'
+const LOGOUT = 'LOGOUT'
+const SET_ISLOADING = 'SET_ISLOADING'
 
 const defaultState = {
   currentUser: {},
   isAuth: false,
   isLoading: false,
-};
+}
 
 export default function userReducer(state = defaultState, action) {
   switch (action.type) {
@@ -15,24 +15,24 @@ export default function userReducer(state = defaultState, action) {
         ...state,
         currentUser: action.payload,
         isAuth: true,
-      };
+      }
     case LOGOUT:
-      localStorage.removeItem('token');
+      localStorage.removeItem('token')
       return {
         ...state,
         currentUser: {},
         isAuth: false,
-      };
+      }
     case SET_ISLOADING:
       return {
         ...state,
         isLoading: !state.isLoading,
-      };
+      }
     default:
-      return state;
+      return state
   }
 }
 
-export const setUser = (user) => ({ type: SET_USER, payload: user });
-export const logout = () => ({ type: LOGOUT });
-export const setIsLoading = () => ({ type: SET_ISLOADING });
+export const setUser = (user) => ({ type: SET_USER, payload: user })
+export const logout = () => ({ type: LOGOUT })
+export const setIsLoading = () => ({ type: SET_ISLOADING })

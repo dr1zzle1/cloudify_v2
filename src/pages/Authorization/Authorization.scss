@@ -1,44 +1,51 @@
 @import '../../variables';
+
 .auth {
   display: flex;
-  padding: 20px 20px;
-  height: 100vh;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  padding: 20px;
+
   &__wrapper {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 44px 40px;
-    box-shadow: 0px 1px 20px rgba(88, 61, 161, 0.6);
     border-radius: 10px;
+    box-shadow: 0 1px 20px rgb(88 61 161 / 60%);
   }
+
   &__form {
     display: flex;
-    margin-top: 20px;
     flex-direction: column;
+    margin-top: 20px;
   }
+
   &__fields {
     margin-top: 10px;
     margin-bottom: 15px;
+    color: $tertiary;
+    font-size: 20px;
     border: none;
     border-bottom: 1px $tertiary solid;
     outline: none;
-    font-size: 20px;
-    color: $tertiary;
   }
+
   &__signup-link {
-    color: $tertiary;
     margin-top: 40px;
+    color: $tertiary;
     font-weight: 400;
   }
 }
+
 h1 {
   font-size: 24px;
 }
+
 h2 {
-  color: $tertiary;
-  font-size: 14px;
   margin-top: 20px;
+  color: $tertiary;
   font-weight: 400;
+  font-size: 14px;
 }

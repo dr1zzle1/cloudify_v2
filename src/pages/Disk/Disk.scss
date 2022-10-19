@@ -1,4 +1,5 @@
-@import '../../variables.scss';
+@import '../../variables';
+
 .disk {
   margin-left: 300px;
   &__wrapper {
@@ -12,93 +13,17 @@
     margin: 0;
   }
 }
-.header {
-  background: #fff;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 300px;
-  padding: 10px 40px 10px 50px;
+.drop-area {
+  position: absolute;
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  color: $tertiary;
+  font-size: 30px;
+  margin: 20px;
+  background-color: rgba($color: $dark, $alpha: 0.7);
+  border-radius: 40px;
+  border: solid $tertiary 2px;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #afafaf;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-size: 15px;
-  box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 1);
-  z-index: 1000;
-  &__btns {
-    display: flex;
-  }
-  &__add-folder {
-    margin-right: 30px;
-    border: none;
-    background: transparent;
-    outline: none;
-    cursor: pointer;
-    svg {
-      transition: all 0.1s linear;
-      width: 30px;
-      height: 30px;
-      fill: #a5a5a5;
-    }
-    &:hover {
-      svg {
-        fill: $primary;
-      }
-    }
-  }
-  &__btn {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    svg {
-      width: 55px;
-      height: 55px;
-      margin-right: 10px;
-      padding: 15px;
-      background-color: rgba(0, 0, 0, 0.02);
-      border-radius: 50%;
-      transition: all 0.3s linear;
-    }
-    &:hover {
-      svg {
-        fill: #fff;
-        background-color: $primary;
-      }
-    }
-  }
-  &__info {
-    &-memory {
-      border: 1px solid #f3f3f3;
-      padding: 17px;
-      border-radius: 40px;
-      span {
-        color: $primary;
-      }
-    }
-  }
-  input {
-    display: none;
-  }
-  @media (max-width: 992px) {
-    left: 0;
-  }
-  @media (max-width: 768px) {
-    font-size: 10px;
-    justify-content: space-between;
-    &__add-folder {
-      svg {
-        height: 20px;
-        width: 20px;
-      }
-    }
-    &__btn {
-      svg {
-        width: 35px;
-        height: 36px;
-        padding: 7px;
-      }
-    }
-  }
+  justify-content: center;
+  align-items: center;
 }
